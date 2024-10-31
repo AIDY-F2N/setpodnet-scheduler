@@ -111,19 +111,12 @@ kubectl apply -f setpodnet-scheduler.yaml
 kubectl apply -f example1/testPod1.yaml
 ```
 
-<div align="center">
-    <img src="figures/testpod1.png">
-</div>
-
 Then:
 
 ```bash[language=bash]
 kubectl apply -f example1/testPod2.yaml
 ```
 
-<div align="center">
-    <img src="figures/testpod2.png">
-</div>
 
 ## Accessing the setpodnet-scheduler Pod for Debugging
 
