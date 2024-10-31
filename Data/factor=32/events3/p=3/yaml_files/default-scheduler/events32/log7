@@ -1,0 +1,50 @@
+{
+    "514": {
+        "nbr": 0,
+        "deployed": 1
+    },
+    "505": {
+        "nbr": 1,
+        "deployed": 1
+    },
+    "511": {
+        "nbr": 2,
+        "deployed": 1
+    },
+    "512": {
+        "nbr": 3,
+        "deployed": 1
+    },
+    "506": {
+        "nbr": 4,
+        "deployed": 1
+    },
+    "510": {
+        "nbr": 5,
+        "deployed": 0
+    },
+    "509": {
+        "nbr": 6,
+        "deployed": 1
+    },
+    "508": {
+        "nbr": 7,
+        "deployed": 0
+    },
+    "513": {
+        "nbr": 8,
+        "deployed": 0
+    },
+    "515": {
+        "nbr": 9,
+        "deployed": 0
+    },
+    "504": {
+        "nbr": 10,
+        "deployed": 1
+    },
+    "507": {
+        "nbr": 11,
+        "deployed": 0
+    }
+}

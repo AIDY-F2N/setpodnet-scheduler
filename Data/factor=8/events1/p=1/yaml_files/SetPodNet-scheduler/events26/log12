@@ -1,0 +1,50 @@
+{
+    "321": {
+        "nbr": 0,
+        "deployed": 1
+    },
+    "318": {
+        "nbr": 1,
+        "deployed": 1
+    },
+    "315": {
+        "nbr": 2,
+        "deployed": 1
+    },
+    "312": {
+        "nbr": 3,
+        "deployed": 1
+    },
+    "320": {
+        "nbr": 4,
+        "deployed": 1
+    },
+    "314": {
+        "nbr": 5,
+        "deployed": 1
+    },
+    "317": {
+        "nbr": 6,
+        "deployed": 1
+    },
+    "323": {
+        "nbr": 7,
+        "deployed": 1
+    },
+    "313": {
+        "nbr": 8,
+        "deployed": 1
+    },
+    "322": {
+        "nbr": 9,
+        "deployed": 1
+    },
+    "316": {
+        "nbr": 10,
+        "deployed": 1
+    },
+    "319": {
+        "nbr": 11,
+        "deployed": 1
+    }
+}

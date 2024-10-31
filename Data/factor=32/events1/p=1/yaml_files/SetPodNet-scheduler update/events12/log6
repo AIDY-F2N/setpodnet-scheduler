@@ -1,0 +1,50 @@
+{
+    "148": {
+        "nbr": 0,
+        "deployed": 1
+    },
+    "144": {
+        "nbr": 1,
+        "deployed": 1
+    },
+    "154": {
+        "nbr": 2,
+        "deployed": 1
+    },
+    "150": {
+        "nbr": 3,
+        "deployed": 1
+    },
+    "151": {
+        "nbr": 4,
+        "deployed": 1
+    },
+    "152": {
+        "nbr": 5,
+        "deployed": 0
+    },
+    "153": {
+        "nbr": 6,
+        "deployed": 0
+    },
+    "145": {
+        "nbr": 7,
+        "deployed": 0
+    },
+    "147": {
+        "nbr": 8,
+        "deployed": 0
+    },
+    "146": {
+        "nbr": 9,
+        "deployed": 0
+    },
+    "155": {
+        "nbr": 10,
+        "deployed": 0
+    },
+    "149": {
+        "nbr": 11,
+        "deployed": 1
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "30": {
+        "nbr": 0,
+        "deployed": 1
+    },
+    "27": {
+        "nbr": 1,
+        "deployed": 1
+    },
+    "32": {
+        "nbr": 2,
+        "deployed": 1
+    },
+    "25": {
+        "nbr": 3,
+        "deployed": 1
+    },
+    "29": {
+        "nbr": 4,
+        "deployed": 1
+    },
+    "35": {
+        "nbr": 5,
+        "deployed": 1
+    },
+    "26": {
+        "nbr": 6,
+        "deployed": 1
+    },
+    "33": {
+        "nbr": 7,
+        "deployed": 1
+    },
+    "31": {
+        "nbr": 8,
+        "deployed": 1
+    },
+    "34": {
+        "nbr": 9,
+        "deployed": 1
+    },
+    "24": {
+        "nbr": 10,
+        "deployed": 1
+    },
+    "28": {
+        "nbr": 11,
+        "deployed": 1
+    }
+}

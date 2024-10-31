@@ -1,0 +1,70 @@
+{
+    "setpod-scheduler": {
+        "p=3": {
+            "totaltime_accepted": 4101.804621458054,
+            "totaltime_refused": 0,
+            "accepted": 48,
+            "worked": 48,
+            "not_worked": [],
+            "number_of_slices": 48,
+            "qos": {
+                "transfer_time_ms": 5518.92352104187,
+                "rtt_ms": 5486.218690872192,
+                "bandwidth_MBps": 64159.419538700975,
+                "same_node": 187,
+                "same_site": 188
+            }
+        }
+    },
+    "setpod-scheduler2": {
+        "p=3": {
+            "totaltime_accepted": 651.4596660137177,
+            "totaltime_refused": 0,
+            "accepted": 48,
+            "worked": 48,
+            "not_worked": [],
+            "number_of_slices": 48,
+            "qos": {
+                "transfer_time_ms": 3981.11891746521,
+                "rtt_ms": 3959.291696548462,
+                "bandwidth_MBps": 67005.27863563324,
+                "same_node": 185,
+                "same_site": 188
+            }
+        }
+    },
+    "default-scheduler": {
+        "p=3": {
+            "totaltime_accepted": 595.3490884304047,
+            "totaltime_refused": 0,
+            "accepted": 48,
+            "worked": 48,
+            "not_worked": [],
+            "number_of_slices": 48,
+            "qos": {
+                "transfer_time_ms": 20613.37947845459,
+                "rtt_ms": 20336.328983306885,
+                "bandwidth_MBps": 49879.8826462753,
+                "same_node": 14,
+                "same_site": 51
+            }
+        }
+    },
+    "stork": {
+        "p=3": {
+            "totaltime_accepted": 664.7710793018341,
+            "totaltime_refused": 0,
+            "accepted": 48,
+            "worked": 48,
+            "not_worked": [],
+            "number_of_slices": 48,
+            "qos": {
+                "transfer_time_ms": 25518.41902732849,
+                "rtt_ms": 25124.393701553345,
+                "bandwidth_MBps": 39576.45215955512,
+                "same_node": 10,
+                "same_site": 45
+            }
+        }
+    }
+}

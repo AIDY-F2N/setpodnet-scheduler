@@ -1,0 +1,50 @@
+{
+    "92": {
+        "nbr": 0,
+        "deployed": 1
+    },
+    "95": {
+        "nbr": 1,
+        "deployed": 1
+    },
+    "84": {
+        "nbr": 2,
+        "deployed": 1
+    },
+    "89": {
+        "nbr": 3,
+        "deployed": 1
+    },
+    "85": {
+        "nbr": 4,
+        "deployed": 1
+    },
+    "86": {
+        "nbr": 5,
+        "deployed": 1
+    },
+    "90": {
+        "nbr": 6,
+        "deployed": 0
+    },
+    "93": {
+        "nbr": 7,
+        "deployed": 0
+    },
+    "91": {
+        "nbr": 8,
+        "deployed": 1
+    },
+    "88": {
+        "nbr": 9,
+        "deployed": 1
+    },
+    "87": {
+        "nbr": 10,
+        "deployed": 0
+    },
+    "94": {
+        "nbr": 11,
+        "deployed": 1
+    }
+}

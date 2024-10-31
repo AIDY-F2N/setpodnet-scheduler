@@ -1,0 +1,50 @@
+{
+    "326": {
+        "nbr": 0,
+        "deployed": 1
+    },
+    "335": {
+        "nbr": 1,
+        "deployed": 1
+    },
+    "329": {
+        "nbr": 2,
+        "deployed": 1
+    },
+    "325": {
+        "nbr": 3,
+        "deployed": 1
+    },
+    "332": {
+        "nbr": 4,
+        "deployed": 1
+    },
+    "333": {
+        "nbr": 5,
+        "deployed": 1
+    },
+    "324": {
+        "nbr": 6,
+        "deployed": 1
+    },
+    "328": {
+        "nbr": 7,
+        "deployed": 1
+    },
+    "331": {
+        "nbr": 8,
+        "deployed": 1
+    },
+    "327": {
+        "nbr": 9,
+        "deployed": 1
+    },
+    "330": {
+        "nbr": 10,
+        "deployed": 0
+    },
+    "334": {
+        "nbr": 11,
+        "deployed": 0
+    }
+}

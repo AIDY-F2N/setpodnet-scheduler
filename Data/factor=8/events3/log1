@@ -1,0 +1,70 @@
+{
+    "setpod-scheduler": {
+        "p=3": {
+            "totaltime_accepted": 2098.066554784775,
+            "totaltime_refused": 0,
+            "accepted": 24,
+            "worked": 24,
+            "not_worked": [],
+            "number_of_slices": 24,
+            "qos": {
+                "transfer_time_ms": 788.3021831512451,
+                "rtt_ms": 783.40744972229,
+                "bandwidth_MBps": 32751.65320567839,
+                "same_node": 94,
+                "same_site": 94
+            }
+        }
+    },
+    "setpod-scheduler2": {
+        "p=3": {
+            "totaltime_accepted": 334.9919602870941,
+            "totaltime_refused": 0,
+            "accepted": 24,
+            "worked": 24,
+            "not_worked": [],
+            "number_of_slices": 24,
+            "qos": {
+                "transfer_time_ms": 991.220235824585,
+                "rtt_ms": 983.022928237915,
+                "bandwidth_MBps": 34274.00864738952,
+                "same_node": 93,
+                "same_site": 94
+            }
+        }
+    },
+    "default-scheduler": {
+        "p=3": {
+            "totaltime_accepted": 298.0374164581299,
+            "totaltime_refused": 0,
+            "accepted": 24,
+            "worked": 24,
+            "not_worked": [],
+            "number_of_slices": 24,
+            "qos": {
+                "transfer_time_ms": 12434.324741363525,
+                "rtt_ms": 12284.11841392517,
+                "bandwidth_MBps": 23533.71988527496,
+                "same_node": 7,
+                "same_site": 23
+            }
+        }
+    },
+    "stork": {
+        "p=3": {
+            "totaltime_accepted": 334.1165735721588,
+            "totaltime_refused": 0,
+            "accepted": 24,
+            "worked": 24,
+            "not_worked": [],
+            "number_of_slices": 24,
+            "qos": {
+                "transfer_time_ms": 16038.42830657959,
+                "rtt_ms": 15819.890975952148,
+                "bandwidth_MBps": 18106.174614384217,
+                "same_node": 4,
+                "same_site": 20
+            }
+        }
+    }
+}

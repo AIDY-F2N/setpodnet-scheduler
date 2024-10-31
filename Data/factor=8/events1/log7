@@ -1,0 +1,70 @@
+{
+    "setpod-scheduler": {
+        "p=1": {
+            "totaltime_accepted": 8019.770577430725,
+            "totaltime_refused": 0,
+            "accepted": 96,
+            "worked": 96,
+            "not_worked": [],
+            "number_of_slices": 96,
+            "qos": {
+                "transfer_time_ms": 1059.8630905151367,
+                "rtt_ms": 1024.1408348083496,
+                "bandwidth_MBps": 180567.33057025555,
+                "same_node": 380,
+                "same_site": 380
+            }
+        }
+    },
+    "setpod-scheduler2": {
+        "p=1": {
+            "totaltime_accepted": 1169.0353100299835,
+            "totaltime_refused": 0,
+            "accepted": 96,
+            "worked": 96,
+            "not_worked": [],
+            "number_of_slices": 96,
+            "qos": {
+                "transfer_time_ms": 1708.5981369018555,
+                "rtt_ms": 1617.8061962127686,
+                "bandwidth_MBps": 171959.67533220592,
+                "same_node": 374,
+                "same_site": 374
+            }
+        }
+    },
+    "default-scheduler": {
+        "p=1": {
+            "totaltime_accepted": 1114.99569272995,
+            "totaltime_refused": 0,
+            "accepted": 96,
+            "worked": 96,
+            "not_worked": [],
+            "number_of_slices": 96,
+            "qos": {
+                "transfer_time_ms": 8021.883726119995,
+                "rtt_ms": 7389.9900913238525,
+                "bandwidth_MBps": 133450.577769161,
+                "same_node": 35,
+                "same_site": 153
+            }
+        }
+    },
+    "stork": {
+        "p=1": {
+            "totaltime_accepted": 1148.545381307602,
+            "totaltime_refused": 0,
+            "accepted": 96,
+            "worked": 96,
+            "not_worked": [],
+            "number_of_slices": 96,
+            "qos": {
+                "transfer_time_ms": 11908.808469772339,
+                "rtt_ms": 10924.605369567871,
+                "bandwidth_MBps": 109666.50432172134,
+                "same_node": 39,
+                "same_site": 159
+            }
+        }
+    }
+}

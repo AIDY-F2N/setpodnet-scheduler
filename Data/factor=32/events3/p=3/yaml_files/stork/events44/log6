@@ -1,0 +1,50 @@
+{
+    "648": {
+        "nbr": 0,
+        "deployed": 1
+    },
+    "659": {
+        "nbr": 1,
+        "deployed": 1
+    },
+    "658": {
+        "nbr": 2,
+        "deployed": 1
+    },
+    "652": {
+        "nbr": 3,
+        "deployed": 1
+    },
+    "656": {
+        "nbr": 4,
+        "deployed": 1
+    },
+    "649": {
+        "nbr": 5,
+        "deployed": 0
+    },
+    "651": {
+        "nbr": 6,
+        "deployed": 1
+    },
+    "650": {
+        "nbr": 7,
+        "deployed": 0
+    },
+    "654": {
+        "nbr": 8,
+        "deployed": 0
+    },
+    "655": {
+        "nbr": 9,
+        "deployed": 0
+    },
+    "657": {
+        "nbr": 10,
+        "deployed": 0
+    },
+    "653": {
+        "nbr": 11,
+        "deployed": 0
+    }
+}

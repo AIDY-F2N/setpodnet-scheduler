@@ -1,0 +1,704 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: shared-storagesim211
+  namespace: sim211
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Mi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-shared-storagesim211
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 50Mi
+  hostPath:
+    path: /mnt/data/shared-storagesim211
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: ''
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    bandwidth-pod-g: '9'
+    communication-with: pod-g
+    latency-pod-g: '6'
+  labels:
+    app: pod-a
+    app_ad: '211'
+    id: '1'
+    name: pod-a
+    nb_pods: '8'
+    timelimit: '200'
+    update: 'True'
+  name: pod-a
+spec:
+  containers:
+  - command:
+    - python
+    - /scripts/pod-a.py
+    image: python:3.11-slim
+    name: container-pod-a
+    resources:
+      limits:
+        cpu: 1600m
+        memory: 2048Mi
+      requests:
+        cpu: 1600m
+        memory: 2048Mi
+    volumeMounts:
+    - mountPath: /scripts
+      name: script-volume
+    - mountPath: /shared
+      name: shared-storagesim211-volume
+  schedulerName: default-scheduler
+  volumes:
+  - configMap:
+      name: script-configsim211
+    name: script-volume
+  - name: shared-storagesim211-volume
+    persistentVolumeClaim:
+      claimName: shared-storagesim211
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    bandwidth-pod-e: '8'
+    communication-with: pod-e
+    latency-pod-e: '9'
+  labels:
+    app: pod-b
+    app_ad: '211'
+    id: '1'
+    name: pod-b
+    nb_pods: '8'
+    timelimit: '200'
+    update: 'True'
+  name: pod-b
+spec:
+  containers:
+  - command:
+    - python
+    - /scripts/pod-b.py
+    image: python:3.11-slim
+    name: container-pod-b
+    resources:
+      limits:
+        cpu: 2400m
+        memory: 3072Mi
+      requests:
+        cpu: 2400m
+        memory: 3072Mi
+    volumeMounts:
+    - mountPath: /scripts
+      name: script-volume
+    - mountPath: /shared
+      name: shared-storagesim211-volume
+  schedulerName: default-scheduler
+  volumes:
+  - configMap:
+      name: script-configsim211
+    name: script-volume
+  - name: shared-storagesim211-volume
+    persistentVolumeClaim:
+      claimName: shared-storagesim211
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    bandwidth-pod-h: '5'
+    communication-with: pod-h
+    latency-pod-h: '9'
+  labels:
+    app: pod-c
+    app_ad: '211'
+    id: '1'
+    name: pod-c
+    nb_pods: '8'
+    timelimit: '200'
+    update: 'True'
+  name: pod-c
+spec:
+  containers:
+  - command:
+    - python
+    - /scripts/pod-c.py
+    image: python:3.11-slim
+    name: container-pod-c
+    resources:
+      limits:
+        cpu: 800m
+        memory: 1024Mi
+      requests:
+        cpu: 800m
+        memory: 1024Mi
+    volumeMounts:
+    - mountPath: /scripts
+      name: script-volume
+    - mountPath: /shared
+      name: shared-storagesim211-volume
+  schedulerName: default-scheduler
+  volumes:
+  - configMap:
+      name: script-configsim211
+    name: script-volume
+  - name: shared-storagesim211-volume
+    persistentVolumeClaim:
+      claimName: shared-storagesim211
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    bandwidth-pod-f: '5'
+    communication-with: pod-f
+    latency-pod-f: '7'
+  labels:
+    app: pod-d
+    app_ad: '211'
+    id: '1'
+    name: pod-d
+    nb_pods: '8'
+    timelimit: '200'
+    update: 'True'
+  name: pod-d
+spec:
+  containers:
+  - command:
+    - python
+    - /scripts/pod-d.py
+    image: python:3.11-slim
+    name: container-pod-d
+    resources:
+      limits:
+        cpu: 1600m
+        memory: 3072Mi
+      requests:
+        cpu: 1600m
+        memory: 3072Mi
+    volumeMounts:
+    - mountPath: /scripts
+      name: script-volume
+    - mountPath: /shared
+      name: shared-storagesim211-volume
+  schedulerName: default-scheduler
+  volumes:
+  - configMap:
+      name: script-configsim211
+    name: script-volume
+  - name: shared-storagesim211-volume
+    persistentVolumeClaim:
+      claimName: shared-storagesim211
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    communication-with: ''
+  labels:
+    app: pod-e
+    app_ad: '211'
+    id: '1'
+    name: pod-e
+    nb_pods: '8'
+    timelimit: '200'
+    update: 'True'
+  name: pod-e
+spec:
+  containers:
+  - command:
+    - python
+    - /scripts/pod-e.py
+    image: python:3.11-slim
+    name: container-pod-e
+    resources:
+      limits:
+        cpu: 800m
+        memory: 1024Mi
+      requests:
+        cpu: 800m
+        memory: 1024Mi
+    volumeMounts:
+    - mountPath: /scripts
+      name: script-volume
+    - mountPath: /shared
+      name: shared-storagesim211-volume
+  schedulerName: default-scheduler
+  volumes:
+  - configMap:
+      name: script-configsim211
+    name: script-volume
+  - name: shared-storagesim211-volume
+    persistentVolumeClaim:
+      claimName: shared-storagesim211
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    communication-with: ''
+  labels:
+    app: pod-f
+    app_ad: '211'
+    id: '1'
+    name: pod-f
+    nb_pods: '8'
+    timelimit: '200'
+    update: 'True'
+  name: pod-f
+spec:
+  containers:
+  - command:
+    - python
+    - /scripts/pod-f.py
+    image: python:3.11-slim
+    name: container-pod-f
+    resources:
+      limits:
+        cpu: 800m
+        memory: 2048Mi
+      requests:
+        cpu: 800m
+        memory: 2048Mi
+    volumeMounts:
+    - mountPath: /scripts
+      name: script-volume
+    - mountPath: /shared
+      name: shared-storagesim211-volume
+  schedulerName: default-scheduler
+  volumes:
+  - configMap:
+      name: script-configsim211
+    name: script-volume
+  - name: shared-storagesim211-volume
+    persistentVolumeClaim:
+      claimName: shared-storagesim211
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    communication-with: ''
+  labels:
+    app: pod-g
+    app_ad: '211'
+    id: '1'
+    name: pod-g
+    nb_pods: '8'
+    timelimit: '200'
+    update: 'True'
+  name: pod-g
+spec:
+  containers:
+  - command:
+    - python
+    - /scripts/pod-g.py
+    image: python:3.11-slim
+    name: container-pod-g
+    resources:
+      limits:
+        cpu: 1600m
+        memory: 1024Mi
+      requests:
+        cpu: 1600m
+        memory: 1024Mi
+    volumeMounts:
+    - mountPath: /scripts
+      name: script-volume
+    - mountPath: /shared
+      name: shared-storagesim211-volume
+  schedulerName: default-scheduler
+  volumes:
+  - configMap:
+      name: script-configsim211
+    name: script-volume
+  - name: shared-storagesim211-volume
+    persistentVolumeClaim:
+      claimName: shared-storagesim211
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    communication-with: ''
+  labels:
+    app: pod-h
+    app_ad: '211'
+    id: '1'
+    name: pod-h
+    nb_pods: '8'
+    timelimit: '200'
+    update: 'True'
+  name: pod-h
+spec:
+  containers:
+  - command:
+    - python
+    - /scripts/pod-h.py
+    image: python:3.11-slim
+    name: container-pod-h
+    resources:
+      limits:
+        cpu: 2400m
+        memory: 1024Mi
+      requests:
+        cpu: 2400m
+        memory: 1024Mi
+    volumeMounts:
+    - mountPath: /scripts
+      name: script-volume
+    - mountPath: /shared
+      name: shared-storagesim211-volume
+  schedulerName: default-scheduler
+  volumes:
+  - configMap:
+      name: script-configsim211
+    name: script-volume
+  - name: shared-storagesim211-volume
+    persistentVolumeClaim:
+      claimName: shared-storagesim211
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: script-configsim211
+  namespace: sim211
+data:
+  common.py: |
+        import socket
+        import time
+        import struct
+        import logging
+        import json
+        from logging import basicConfig, getLogger, INFO
+        ##########################################################################
+        def logs(name_pod):
+            # Define the format for the logs with fixed field widths
+            formatter = (
+                " %(asctime)s | %(levelname)-8s :\n********* %(message)s *********|\n"
+            )
+            # Log file path within the shared storage
+            log_file_path = f'/shared/{name_pod}_std.log'
+            
+            # Configure the basic settings for logging
+            basicConfig(
+                filename=log_file_path,    # Log file name within shared volume
+                filemode='w',               # Write mode
+                level=INFO,                 # Log level
+                format=formatter            # Log format
+            )
+            logger = getLogger(name_pod)
+            return logger
+        ##########################################################################
+        # Function to attempt connection with retries
+        def connect_with_retries(host, port, retry_delay,logger):
+            while True:
+                try:
+                    logger.info("*********************** connect ***************************")
+                    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                    s.connect((host, port))
+                    logger.info("*********************** end connect ***************************")
+                    return s
+                except OSError as e:
+                    #logger.info(f"Connection failed: {e}. name_podRetrying in {retry_delay} seconds...")
+                    time.sleep(retry_delay)    
+        ##########################################################################
+        def send(vector,logger,HOST,PORT):
+            RETRY_DELAY = 5  # seconds
+            logger.info(f"***********************send to {HOST} ***************************")
+            with connect_with_retries(HOST, PORT, RETRY_DELAY,logger) as s:
+                
+                # Ajouter l'horodatage actuel a la fin du vecteur (sous forme de bytes)
+                timestamp = struct.pack('d', time.time())
+                vector_with_timestamp = vector + timestamp
+                
+                s.sendall(vector_with_timestamp)
+                
+                # Fermer la connexion apres l'envoi des donneesreceive(
+                s.shutdown(socket.SHUT_WR)
+                logger.info(f"Sending vector with timestamp of length {len(vector_with_timestamp)} bytes.")
+        ##########################################################################
+        def receive(logger,frompod,to_pod):
+            HOST = "0.0.0.0"
+            PORT = 12345
+            Buffer=10485760*10 # 65536*60 #64 Ko (65536 octets), 10485760  pour  10 Mb
+            logger.info(f"***********************receive from {frompod} tos {to_pod} ***************************")
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.bind((HOST, PORT))
+                s.listen()
+                logger.info(f"to_pod {to_pod} listening for connections")
+                conn, addr = s.accept()
+                with conn:
+                    data = b''
+                    start_time = time.time()  # Start timing when the connection is accepted
+                    logger.info(f"La taille du Buffer TCP= {Buffer}")
+                    while True:
+                        part = conn.recv(Buffer)
+                        if not part:
+                            break
+                        data += part
+                    end_time = time.time()  # End timing after receiving all data
+                    logger.info("*********************** All data received ***************************")
+                    timestamp_size = struct.calcsize('d')
+                    if len(data) >= timestamp_size:
+                        timestamp_data = data[-timestamp_size:]
+                        try:
+                            send_time = struct.unpack('d', timestamp_data)[0]
+                        except struct.error as e:
+                            logger.error(f"Failed to unpack timestamp: {e}")
+                            send_time = None
+                        
+                        if send_time:
+                            transfer_time = end_time - send_time
+                            rtt = end_time - start_time
+                            bandwidth = len(data) / rtt  # Calcul de la bande passante
+                            
+                            logger.info(f"Data received from {frompod} tos {to_pod} with timestamp: {send_time}")
+                            logger.info("******************************************")
+                            logger.info(f"Time taken to receive data: {transfer_time* 1000:.2f} ms")
+                            logger.info(f"Round-trip time (RTT): {rtt * 1000:.2f} ms")
+                            logger.info(f"Bandwidth: {bandwidth / (1024 * 1024):.2f} MB/s")
+                            logger.info("******************************************")
+                            logger.info(f"vector_size_mb=: {len(data) / 1048576} Mo,1 Mo = 1048576 octets")
+                            log_info = {
+                                "frompod": frompod,
+                                "to_pod": to_pod,                               
+                                "timestamp": send_time,
+                                "transfer_time_ms": transfer_time * 1000,
+                                "rtt_ms": rtt * 1000,
+                                "bandwidth_MBps": bandwidth / (1024 * 1024),
+                                "vector_size_mb": len(data) / 1048576
+                            }
+                            try:
+                                log_file_path = f'/shared/{to_pod}_data.json'
+                                with open(log_file_path, 'w') as json_file:
+                                    json.dump(log_info, json_file, indent=4)
+                            except:
+                                pass
+                        else:
+                            logger.error("No valid timestamp received")
+                    else:
+                        logger.error("Data received does not contain a valid timestamp")
+                    
+                    logger.info(f"Total data received: {len(data)} bytes")
+                    logger.info("*********************** Connection Closed ***************************")   
+    
+  pod-a.py: |
+    from common import logs, send, receive
+    import time
+    
+    ################################ send ##########################################
+    name_pod="pod-a"
+    mega=1048576  #1 Mo = 1048576 octets
+    VECTOR_SIZE = int(mega/2)
+    HOST = "pod-g-service"
+    PORT = 12345
+    vector = b'1' * VECTOR_SIZE
+    logger=logs(name_pod)
+    time.sleep(5)
+    send(vector,logger,HOST,PORT)
+    ##########################################################################
+    time.sleep(500000)
+  pod-b.py: |
+    from common import logs, send, receive
+    import time
+    
+    ################################ send ##########################################
+    name_pod="pod-b"
+    mega=1048576  #1 Mo = 1048576 octets
+    VECTOR_SIZE = int(mega/2)
+    HOST = "pod-e-service"
+    PORT = 12345
+    vector = b'1' * VECTOR_SIZE
+    logger=logs(name_pod)
+    time.sleep(5)
+    send(vector,logger,HOST,PORT)
+    ##########################################################################
+    time.sleep(500000)
+  pod-c.py: |
+    from common import logs, send, receive
+    import time
+    
+    ################################ send ##########################################
+    name_pod="pod-c"
+    mega=1048576  #1 Mo = 1048576 octets
+    VECTOR_SIZE = int(mega/2)
+    HOST = "pod-h-service"
+    PORT = 12345
+    vector = b'1' * VECTOR_SIZE
+    logger=logs(name_pod)
+    time.sleep(5)
+    send(vector,logger,HOST,PORT)
+    ##########################################################################
+    time.sleep(500000)
+  pod-d.py: |
+    from common import logs, send, receive
+    import time
+    
+    ################################ send ##########################################
+    name_pod="pod-d"
+    mega=1048576  #1 Mo = 1048576 octets
+    VECTOR_SIZE = int(mega/2)
+    HOST = "pod-f-service"
+    PORT = 12345
+    vector = b'1' * VECTOR_SIZE
+    logger=logs(name_pod)
+    time.sleep(5)
+    send(vector,logger,HOST,PORT)
+    ##########################################################################
+    time.sleep(500000)
+  pod-e.py: |
+    from common import logs, send, receive
+    import time
+    
+    ################################### receive ####################################      
+    frompod="pod-b"
+    logger=logs(frompod)
+    to_pod="pod-e"
+    receive(logger,frompod,to_pod)
+    
+    ##########################################################################
+    time.sleep(500000)
+  pod-f.py: |
+    from common import logs, send, receive
+    import time
+    
+    ################################### receive ####################################      
+    frompod="pod-d"
+    logger=logs(frompod)
+    to_pod="pod-f"
+    receive(logger,frompod,to_pod)
+    
+    ##########################################################################
+    time.sleep(500000)
+  pod-g.py: |
+    from common import logs, send, receive
+    import time
+    
+    ################################### receive ####################################      
+    frompod="pod-a"
+    logger=logs(frompod)
+    to_pod="pod-g"
+    receive(logger,frompod,to_pod)
+    
+    ##########################################################################
+    time.sleep(500000)
+  pod-h.py: |
+    from common import logs, send, receive
+    import time
+    
+    ################################### receive ####################################      
+    frompod="pod-c"
+    logger=logs(frompod)
+    to_pod="pod-h"
+    receive(logger,frompod,to_pod)
+    
+    ##########################################################################
+    time.sleep(500000)
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-a-service
+spec:
+  ports:
+  - port: 12345
+    protocol: TCP
+    targetPort: 12345
+  selector:
+    app: pod-a
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-b-service
+spec:
+  ports:
+  - port: 12345
+    protocol: TCP
+    targetPort: 12345
+  selector:
+    app: pod-b
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-c-service
+spec:
+  ports:
+  - port: 12345
+    protocol: TCP
+    targetPort: 12345
+  selector:
+    app: pod-c
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-d-service
+spec:
+  ports:
+  - port: 12345
+    protocol: TCP
+    targetPort: 12345
+  selector:
+    app: pod-d
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-e-service
+spec:
+  ports:
+  - port: 12345
+    protocol: TCP
+    targetPort: 12345
+  selector:
+    app: pod-e
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-f-service
+spec:
+  ports:
+  - port: 12345
+    protocol: TCP
+    targetPort: 12345
+  selector:
+    app: pod-f
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-g-service
+spec:
+  ports:
+  - port: 12345
+    protocol: TCP
+    targetPort: 12345
+  selector:
+    app: pod-g
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-h-service
+spec:
+  ports:
+  - port: 12345
+    protocol: TCP
+    targetPort: 12345
+  selector:
+    app: pod-h

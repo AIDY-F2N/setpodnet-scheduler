@@ -1,0 +1,70 @@
+{
+    "setpod-scheduler": {
+        "p=1": {
+            "totaltime_accepted": 5019.935195446014,
+            "totaltime_refused": 0,
+            "accepted": 60,
+            "worked": 60,
+            "not_worked": [],
+            "number_of_slices": 60,
+            "qos": {
+                "transfer_time_ms": 906.2340259552002,
+                "rtt_ms": 863.4066581726074,
+                "bandwidth_MBps": 111872.85724351899,
+                "same_node": 236,
+                "same_site": 236
+            }
+        }
+    },
+    "setpod-scheduler2": {
+        "p=1": {
+            "totaltime_accepted": 742.110121011734,
+            "totaltime_refused": 0,
+            "accepted": 60,
+            "worked": 60,
+            "not_worked": [],
+            "number_of_slices": 60,
+            "qos": {
+                "transfer_time_ms": 1357.6898574829102,
+                "rtt_ms": 1278.8817882537842,
+                "bandwidth_MBps": 103314.05986982593,
+                "same_node": 233,
+                "same_site": 233
+            }
+        }
+    },
+    "default-scheduler": {
+        "p=1": {
+            "totaltime_accepted": 688.9937124252319,
+            "totaltime_refused": 0,
+            "accepted": 60,
+            "worked": 60,
+            "not_worked": [],
+            "number_of_slices": 60,
+            "qos": {
+                "transfer_time_ms": 5349.187135696411,
+                "rtt_ms": 4925.527095794678,
+                "bandwidth_MBps": 81622.55720490974,
+                "same_node": 20,
+                "same_site": 94
+            }
+        }
+    },
+    "stork": {
+        "p=1": {
+            "totaltime_accepted": 709.8969266414642,
+            "totaltime_refused": 0,
+            "accepted": 60,
+            "worked": 60,
+            "not_worked": [],
+            "number_of_slices": 60,
+            "qos": {
+                "transfer_time_ms": 7758.751153945923,
+                "rtt_ms": 7117.171764373779,
+                "bandwidth_MBps": 65289.86288246632,
+                "same_node": 19,
+                "same_site": 96
+            }
+        }
+    }
+}

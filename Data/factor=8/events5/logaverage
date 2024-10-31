@@ -1,0 +1,66 @@
+{
+    "setpod-scheduler": {
+        "p=5": {
+            "avg_totaltime_accepted": 83.28934754212698,
+            "avg_totaltime_refused": 0.0,
+            "avg_accepted %": 100.0,
+            "avg_worked %": 100.0,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 15.327850977579752,
+                "avg_rtt_ms": 15.153938134511312,
+                "avg_bandwidth_MBps": 1544.1490132276288,
+                "avg_same_node %": 97.95833333333334,
+                "avg_same_site %": 98.66666666666667
+            }
+        }
+    },
+    "setpod-scheduler2": {
+        "p=5": {
+            "avg_totaltime_accepted": 12.44186581214269,
+            "avg_totaltime_refused": 0.0,
+            "avg_accepted %": 100.0,
+            "avg_worked %": 100.0,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 17.98079053560893,
+                "avg_rtt_ms": 17.57158597310384,
+                "avg_bandwidth_MBps": 1540.832711099419,
+                "avg_same_node %": 96.58333333333333,
+                "avg_same_site %": 97.66666666666667
+            }
+        }
+    },
+    "default-scheduler": {
+        "p=5": {
+            "avg_totaltime_accepted": 12.19272234002749,
+            "avg_totaltime_refused": 0.0,
+            "avg_accepted %": 100.0,
+            "avg_worked %": 100.0,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 203.67272853851318,
+                "avg_rtt_ms": 196.22435132662454,
+                "avg_bandwidth_MBps": 1058.895611258657,
+                "avg_same_node %": 9.541666666666666,
+                "avg_same_site %": 37.333333333333336
+            }
+        }
+    },
+    "stork": {
+        "p=5": {
+            "avg_totaltime_accepted": 13.791115232706069,
+            "avg_totaltime_refused": 0.0,
+            "avg_accepted %": 100.0,
+            "avg_worked %": 100.0,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 252.45878060658774,
+                "avg_rtt_ms": 243.08999935785928,
+                "avg_bandwidth_MBps": 888.3479905242275,
+                "avg_same_node %": 9.583333333333334,
+                "avg_same_site %": 37.041666666666664
+            }
+        }
+    }
+}

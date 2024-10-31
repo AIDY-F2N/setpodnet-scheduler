@@ -1,0 +1,66 @@
+{
+    "setpod-scheduler": {
+        "p=3": {
+            "avg_totaltime_accepted": 84.38435508145227,
+            "avg_totaltime_refused": 200.0422013412442,
+            "avg_accepted %": 81.0,
+            "avg_worked %": 81.0,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 101.46707075613516,
+                "avg_rtt_ms": 93.90023461094609,
+                "avg_bandwidth_MBps": 1253.3912764606528,
+                "avg_same_node %": 71.09053497942386,
+                "avg_same_site %": 83.0246913580247
+            }
+        }
+    },
+    "setpod-scheduler2": {
+        "p=3": {
+            "avg_totaltime_accepted": 12.26084513172661,
+            "avg_totaltime_refused": 200.0459667848504,
+            "avg_accepted %": 80.83333333333333,
+            "avg_worked %": 80.83333333333333,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 94.4498062133789,
+                "avg_rtt_ms": 87.7182842529926,
+                "avg_bandwidth_MBps": 1305.7428126325026,
+                "avg_same_node %": 70.4639175257732,
+                "avg_same_site %": 84.38144329896907
+            }
+        }
+    },
+    "default-scheduler": {
+        "p=3": {
+            "avg_totaltime_accepted": 12.142385350500984,
+            "avg_totaltime_refused": 200.04325950334942,
+            "avg_accepted %": 79.0,
+            "avg_worked %": 79.0,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 151.6021605785386,
+                "avg_rtt_ms": 140.1752409552723,
+                "avg_bandwidth_MBps": 1060.5545661974122,
+                "avg_same_node %": 9.49367088607595,
+                "avg_same_site %": 47.46835443037975
+            }
+        }
+    },
+    "stork": {
+        "p=3": {
+            "avg_totaltime_accepted": 13.25914612070043,
+            "avg_totaltime_refused": 200.04641116032235,
+            "avg_accepted %": 78.33333333333333,
+            "avg_worked %": 78.33333333333333,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 177.31114144020893,
+                "avg_rtt_ms": 164.59849996769682,
+                "avg_bandwidth_MBps": 936.9529133430568,
+                "avg_same_node %": 10.053191489361703,
+                "avg_same_site %": 47.5531914893617
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "472": {
+        "nbr": 0,
+        "deployed": 1
+    },
+    "477": {
+        "nbr": 1,
+        "deployed": 1
+    },
+    "478": {
+        "nbr": 2,
+        "deployed": 1
+    },
+    "468": {
+        "nbr": 3,
+        "deployed": 1
+    },
+    "473": {
+        "nbr": 4,
+        "deployed": 1
+    },
+    "471": {
+        "nbr": 5,
+        "deployed": 1
+    },
+    "479": {
+        "nbr": 6,
+        "deployed": 1
+    },
+    "470": {
+        "nbr": 7,
+        "deployed": 0
+    },
+    "474": {
+        "nbr": 8,
+        "deployed": 1
+    },
+    "475": {
+        "nbr": 9,
+        "deployed": 0
+    },
+    "476": {
+        "nbr": 10,
+        "deployed": 0
+    },
+    "469": {
+        "nbr": 11,
+        "deployed": 0
+    }
+}

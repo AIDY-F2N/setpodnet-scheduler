@@ -1,0 +1,66 @@
+{
+    "setpod-scheduler": {
+        "p=3": {
+            "avg_totaltime_accepted": 84.8494928765297,
+            "avg_totaltime_refused": 0.0,
+            "avg_accepted %": 100.0,
+            "avg_worked %": 100.0,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 70.38536747296651,
+                "avg_rtt_ms": 69.65795596440633,
+                "avg_bandwidth_MBps": 1372.215242234785,
+                "avg_same_node %": 95.5,
+                "avg_same_site %": 96.625
+            }
+        }
+    },
+    "setpod-scheduler2": {
+        "p=3": {
+            "avg_totaltime_accepted": 13.370415869553884,
+            "avg_totaltime_refused": 0.0,
+            "avg_accepted %": 100.0,
+            "avg_worked %": 100.0,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 74.38989758491516,
+                "avg_rtt_ms": 73.78917336463928,
+                "avg_bandwidth_MBps": 1369.9409205546503,
+                "avg_same_node %": 95.25,
+                "avg_same_site %": 96.16666666666667
+            }
+        }
+    },
+    "default-scheduler": {
+        "p=3": {
+            "avg_totaltime_accepted": 12.679344766537348,
+            "avg_totaltime_refused": 0.0,
+            "avg_accepted %": 100.0,
+            "avg_worked %": 100.0,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 331.48809512456256,
+                "avg_rtt_ms": 325.9291418393453,
+                "avg_bandwidth_MBps": 1016.7919335991944,
+                "avg_same_node %": 7.416666666666667,
+                "avg_same_site %": 26.625
+            }
+        }
+    },
+    "stork": {
+        "p=3": {
+            "avg_totaltime_accepted": 13.552406358718873,
+            "avg_totaltime_refused": 0.0,
+            "avg_accepted %": 100.0,
+            "avg_worked %": 100.0,
+            "number_of_slices": 600,
+            "qos": {
+                "avg_transfer_time_ms": 485.8149536450704,
+                "avg_rtt_ms": 477.9234850406647,
+                "avg_bandwidth_MBps": 812.7437063662487,
+                "avg_same_node %": 7.375,
+                "avg_same_site %": 29.125
+            }
+        }
+    }
+}
