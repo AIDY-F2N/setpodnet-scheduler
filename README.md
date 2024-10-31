@@ -10,6 +10,7 @@ Coscheduling refers to the ability to schedule a group of pods at once, as oppos
 ## Contributor
 
 - Massinissa AIT ABA, massinissa.ait-aba@davidson.fr
+- Abdenour Yasser BRAHMI, abdenour-yasser.brahmi@telecom-sudparis.eu
 
 ## Table of Contents
 
