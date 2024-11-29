@@ -98,19 +98,25 @@ metadata:
   name: setpodnet-scheduler
   namespace: kube-system
 spec:
+  replicas: 1
   selector:
     matchLabels:
       component: scheduler
       tier: control-plane
-  replicas: 1
   template:
     metadata:
       labels:
         component: scheduler
         tier: control-plane
-        version: second
     spec:
       serviceAccountName: setpodnet-scheduler
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
       containers:
       - image: docker.io/maitaba/setpodnet:v1.0
         name: setpodnet-scheduler
+        imagePullPolicy: Always
