@@ -108,7 +108,7 @@ kubectl apply -f setpodnet-scheduler.yaml
 
 
 
-3. Deploy the 'threepods-example' application by deploying the three pods 'testPod1.yaml', 'testPod2.yaml' and 'testPod3.yaml' located in the 'example1' folder using the following two commands:
+3. Deploy the 'threepods-example' application by deploying the three pods 'testPod1.yaml', 'testPod2.yaml' and 'testPod3.yaml' located in the 'example1' folder using the following three commands:
 
 ```bash[language=bash]
 kubectl apply -f example1/testPod1.yaml
