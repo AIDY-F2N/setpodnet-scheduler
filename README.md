@@ -46,7 +46,7 @@ metadata:
   labels:
     id: "1"
     app_ad: "1" 
-    nb_pods: "2" 
+    nb_pods: "3" 
     update: "True"
     timelimit: "10"
   spec:
