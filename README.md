@@ -52,28 +52,30 @@ metadata:
   spec:
     schedulerName: setpodnet-scheduler
   annotations:
-    communication-with: "pod2"
+    communication-with: "pod2,pod3"
     latency-pod2: "1"
     bandwidth-pod2: "5"
+    latency-pod3: "10"
+    bandwidth-pod3: "10"
 ```
 
 Here's an explanation of each label:
 
-- 'id': This label signifies an identifier that uniquely distinguishes the pod within the context of its application. It helps differentiate between multiple pods belonging to the same application. Additionally, in the context of deployment sequencing, this identifier serves to establish the sequential order of pods. Pods will be deployed in numerical order according to their assigned IDs.
+- 'id': This label signifies an identifier that uniquely distinguishes the pod within the context of its application. It helps differentiate between multiple pods belonging to the same application. Additionally, in the context of deployment sequencing, this identifier establishes the order in which pods are deployed. Pods will be deployed in numerical order according to their assigned IDs. If "id=1" is used for all pods, they will be deployed in parallel.
 
-- 'app_ad': The 'app_ad' label serves as an application differentiator, allowing for the identification and grouping of pods belonging to different applications. It aids in categorizing pods based on their application affiliation.
+- 'app_ad': The 'app_ad' label serves as an application differentiator, enabling the identification and grouping of pods belonging to different applications. It aids in categorizing pods based on their application affiliation.
 
-- 'nb_pods': This label denotes the total number of pods associated with the specific application. It provides information about the quantity of pods that are part of the same application context.
+- 'nb_pods': This label indicates the total number of pods associated with the specific application. It provides information about the quantity of pods that are part of the same application.
 
-- 'update': The 'update' label is used to determine if the scheduler should measure latency and bandwidth before each application deployment.
+- 'update': The 'update' label determines whether the scheduler should measure latency and bandwidth before each application deployment. By default, this value is set to "True".
 
-- 'timelimit': The 'timelimit' label, when uncommented, signifies the maximum allowed time for the scheduling algorithm to find a suitable deployment or assignment solution for all the pods of the application. Adjust this value based on the allotted time for the scheduling algorithm to make better pod assignments.
+- 'timelimit': The 'timelimit' label, when provided, specifies the maximum allowed time for the scheduling algorithm to find a suitable deployment or assignment solution for all the pods of the application. Adjust this value based on the time allocated for the scheduling algorithm to make optimal pod assignments.
 
-- 'communication-with': Specifies the target pod with which communication is needed ("pod2" in this example).
+- 'communication-with': Specifies the target pods with which communication is required (e.g., "pod2" and "pod3" in this example).
 
-- 'latency-"name_of_the_pod"': Defines the latency requirement for communication with "name_of_the_pod" ("pod2" in this example) on a scale from 1 to 10, where 1 represents low latency importance, and 10 indicates a high priority for low latency.
+- 'latency-"name_of_the_pod"': Defines the latency requirement for communication with the specified pod ("pod2" and "pod3" in this example) on a scale from 1 to 10, where 1 represents low latency importance and 10 indicates a high priority for low latency.
 
-- 'bandwidth-"name_of_the_pod"': Sets the bandwidth requirement for communication with "name_of_the_pod" ("pod2" in this example) on a scale from 1 to 10, where 1 means minimal bandwidth needs, and 10 represents a high demand for bandwidth.
+- 'bandwidth-"name_of_the_pod"': Sets the bandwidth requirement for communication with the specified pod ("pod2" and "pod3" in this example) on a scale from 1 to 10, where 1 means minimal bandwidth needs and 10 represents a high demand for bandwidth.
 
 ## Example1: Illustrating Deployment of setpodnet-scheduler in a Kind Cluster and Application Deployment
 
@@ -81,7 +83,7 @@ In this example, we'll demonstrate the process of:
 
 - Creating a Kind cluster configuration with a specific node setup.
 - Deploying the setpodnet-scheduler into the newly created Kind cluster.
-- Deploying an application consisting of two pods within this cluster, utilizing the setpodnet-scheduler for pod management.
+- Deploying an application consisting of three pods within this cluster, utilizing the setpodnet-scheduler for pod management.
 
 1. If you already have a cluster, you can skip this step. Begin by setting up a YAML configuration file (`cluster-config.yaml`) for the Kind cluster, specifying the required node roles.
 
@@ -106,7 +108,7 @@ kubectl apply -f setpodnet-scheduler.yaml
 
 
 
-3. Deploy the 'twocontainerspod-example' application by deploying the two pods 'testPod1.yaml' and 'testPod2.yaml' located in the 'example1' folder using the following two commands:
+3. Deploy the 'threepods-example' application by deploying the three pods 'testPod1.yaml', 'testPod2.yaml' and 'testPod3.yaml' located in the 'example1' folder using the following two commands:
 
 ```bash[language=bash]
 kubectl apply -f example1/testPod1.yaml
@@ -118,7 +120,11 @@ Then:
 kubectl apply -f example1/testPod2.yaml
 ```
 
+Then:
 
+```bash[language=bash]
+kubectl apply -f example1/testPod3.yaml
+```
 ## Accessing the setpodnet-scheduler Pod for Debugging
 
 If you need to troubleshoot the setpodnet-scheduler pod in your Kubernetes cluster, you can access it using the following command:

@@ -3,11 +3,11 @@ kind: Pod
 metadata:
   name: testpod2
   labels:
-    name: twocontainerspod-example
-    serviceName: twocontainerspod
-    id: "2" #1/2
+    name: threepods-example
+    serviceName: threepods
+    id: "2" 
     app_ad: "1" #application differentiator
-    nb_pods: "2" #number of pods in the application
+    nb_pods: "3" #number of pods in the application
     update: "True" #True to measure latency and bandwidth before each application deployment
     timelimit: "10" #the maximum delay for the scheduling algorithm to provide pod affectation 
 spec:

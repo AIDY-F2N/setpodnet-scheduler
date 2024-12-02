@@ -1,21 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: testpod1
+  name: testpod3
   labels:
     name: threepods-example
     serviceName: threepods
-    id: "1"
+    id: "2" 
     app_ad: "1" #application differentiator
     nb_pods: "3" #number of pods in the application
     update: "True" #True to measure latency and bandwidth before each application deployment
     timelimit: "10" #the maximum delay for the scheduling algorithm to provide pod affectation 
-  annotations:
-    communication-with: "testpod2,testpod3"
-    latency-testpod2: "1"
-    bandwidth-testpod2: "5"
-    latency-testpod3: "10"
-    bandwidth-testpod3: "10"
 spec:
   schedulerName: setpodnet-scheduler
   containers:
